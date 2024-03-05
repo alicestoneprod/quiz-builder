@@ -1,3 +1,6 @@
-import { Boarder } from "./Boarder"
+import { AboutPage } from "./AboutPage"
+import { ExamplePage } from "./ExamplePage"
+import { IndexPage } from "./IndexPage"
+import { LoginPage } from "./LoginPage"
 
-export { Boarder }
+export { AboutPage, ExamplePage, IndexPage, LoginPage }

@@ -1,0 +1,16 @@
+@use "styles" as *;
+
+.iconButton {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.iconLeft {
+  margin-right: 5px;
+}
+
+.iconRight {
+  margin-left: 5px;
+}

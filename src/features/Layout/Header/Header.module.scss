@@ -1,0 +1,46 @@
+@use "styles" as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 15px;
+  padding: 31px 51px 0 31px;
+  width: 100%;
+}
+
+.line {
+  background: $color-grey-ece8;
+  height: 1px;
+}
+
+.titleLinks {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+}
+
+.linksRow {
+  display: flex;
+  gap: 22px;
+}
+
+.button {
+  width: 100px;
+}
+
+.linksBtns {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  background-image: url("/assets/icons/titleIcon_header.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 254px;
+  height: 60px;
+}

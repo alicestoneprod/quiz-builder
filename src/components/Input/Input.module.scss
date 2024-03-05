@@ -1,0 +1,31 @@
+@use "styles" as *;
+
+.inputLabelCnt {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 30px;
+  border: 1px solid $color-grey-default;
+}
+
+.label {
+  margin-bottom: 6px;
+  color: $color-black-default;
+  font-size: 18px;
+}
+
+.input {
+  color: $color-yellow-default;
+  font-size: 18px;
+  font-weight: $fw-semibold;
+}
+
+.inputLeftColor {
+  background: $color-yellow-default;
+  width: 6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -2px;
+}

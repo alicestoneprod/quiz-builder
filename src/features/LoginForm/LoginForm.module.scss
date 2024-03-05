@@ -1,0 +1,31 @@
+@use "styles" as *;
+
+.loginForm {
+}
+
+.form {
+  width: 600px;
+  height: fit-content;
+}
+
+.inputsCnt {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.subInputCnt {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.link {
+  font-size: 18px;
+  color: $color-black-default;
+}
+
+.buttonsRow {
+  display: flex;
+  gap: 30px;
+}

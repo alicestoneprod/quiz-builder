@@ -1,0 +1,38 @@
+@use "styles" as *;
+
+.landingIntro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingInfoLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.titleDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+
+.buttons {
+  display: flex;
+  gap: 28px;
+}
+
+.landingInfoRight {
+  position: relative;
+}
+
+.rightImg {
+  position: relative;
+  bottom: -30px;
+  background: url("/assets/landing/questions.svg") no-repeat;
+  background-size: contain;
+  height: 800px;
+  width: 800px;
+}

@@ -1,3 +1,1 @@
-import { Boarder } from "./Boarder"
-
-export { Boarder }
+export * from "./routes"

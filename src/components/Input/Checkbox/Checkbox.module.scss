@@ -1,0 +1,16 @@
+@use "styles" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.label {
+  color: $color-black-default;
+  font-size: 18px;
+}

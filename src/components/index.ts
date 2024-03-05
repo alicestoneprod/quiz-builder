@@ -1,3 +1,7 @@
-import { Boarder } from "./Boarder"
+import { Button } from "./Button"
+import { Input } from "./Input"
+import { Link } from "./Link"
+import { BorderedText } from "./BorderedText"
+import { Title } from "./Title"
 
-export { Boarder }
+export { Button, Input, Link, BorderedText, Title }
