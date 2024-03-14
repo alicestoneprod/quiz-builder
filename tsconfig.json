@@ -26,7 +26,10 @@
       "pages/*": ["pages/*"],
       "shared/*": ["shared/*"],
       "styles/*": ["styles/*"],
-      "routes/*": ["routes/*"]
+      "routes/*": ["routes/*"],
+      "api/*": ["api/*"],
+      "store/*": ["store/*"],
+      "services/*": ["services/*"]
     }
   },
   "include": ["src"],

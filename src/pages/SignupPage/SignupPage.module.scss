@@ -1,0 +1,50 @@
+@use "styles" as *;
+
+.loginPage {
+  display: flex;
+  flex-direction: row;
+  min-height: 88vh;
+}
+
+.loginLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50svw;
+  padding: 40px 0 0 31px;
+  gap: 40px;
+}
+
+.loginRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background-color: $color-white-f4;
+}
+
+.titleDescCnt {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  align-self: center;
+  background-image: url("/assets/icons/titleIcon_header.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
+  height: 60px;
+}
+
+.desc {
+  font-size: 22px;
+  text-align: center;
+  color: $color-black-default;
+}
+
+.img {
+  width: 450px;
+  height: 450px;
+}

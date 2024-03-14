@@ -8,6 +8,7 @@ interface CheckboxI extends InputProps {}
 export const Checkbox: FC<CheckboxI> = ({
   className,
   error,
+  ref,
   label,
   type,
   value,
@@ -15,7 +16,7 @@ export const Checkbox: FC<CheckboxI> = ({
 }) => {
   return (
     <div className={cn(s.checkbox, className)}>
-      <input onChange={onChange} value={value} type={type} />
+      <input ref={ref} onChange={onChange} value={value} type={type} />
       <label className={s.label}>{label}</label>
     </div>
   )

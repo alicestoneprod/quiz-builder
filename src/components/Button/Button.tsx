@@ -7,21 +7,21 @@ import s from "./Button.module.scss"
 export interface ButtonI extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: string | ReactNode
   onClick?: () => void
-  classNames?: string
+  className?: string
   variant?: "primary" | "outlined" | "text"
   disabled?: boolean
 }
 
 export const Button: FC<ButtonI> = ({
   onClick,
-  classNames,
+  className,
   children,
   variant = "primary",
   disabled,
 }) => {
   return (
     <button
-      className={cn(s.button, s[`${variant}`], classNames)}
+      className={cn(s.button, s[`${variant}`], className)}
       disabled={disabled}
       onClick={onClick}>
       {children}

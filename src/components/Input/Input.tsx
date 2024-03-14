@@ -1,5 +1,4 @@
-import { FC, InputHTMLAttributes, useState } from "react"
-import { ChangeHandler } from "react-hook-form"
+import { FC, InputHTMLAttributes, LegacyRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import {
   inputIsActive,
@@ -14,12 +13,13 @@ export interface InputProps extends InputHTMLAttributes<HTMLButtonElement> {
   placeholder?: string
   className?: string
   value?: string
-  onChange: ChangeHandler
-  error?: string
+  onChange: () => void
+  error?: string | undefined
   label?: string
   type?: string
   id?: string
   labelName?: string
+  ref?: LegacyRef<HTMLInputElement>
 }
 
 export const Input: FC<InputProps> = ({
@@ -29,6 +29,7 @@ export const Input: FC<InputProps> = ({
   type = "text",
   value,
   onChange,
+  ref,
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState<boolean>(false)
@@ -49,6 +50,7 @@ export const Input: FC<InputProps> = ({
         label={label}
         type={type}
         value={value}
+        ref={ref}
         onChange={onChange}
       />
     )
@@ -56,9 +58,14 @@ export const Input: FC<InputProps> = ({
 
   return (
     <div
-      className={cn(s.inputLabelCnt, className, {
-        [s.inputFocused]: isFocused,
-      })}>
+      className={cn(
+        s.inputLabelCnt,
+        className,
+        {
+          [s.inputFocused]: isFocused,
+        },
+        { [s.error]: error }
+      )}>
       <label className={s.label}>{label}</label>
       {isFocused && (
         <AnimatePresence>
@@ -71,6 +78,7 @@ export const Input: FC<InputProps> = ({
         </AnimatePresence>
       )}
       <input
+        ref={ref}
         className={s.input}
         onFocus={onFocus}
         onBlur={onBlur}
