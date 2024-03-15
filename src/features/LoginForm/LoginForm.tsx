@@ -33,8 +33,10 @@ export const LoginForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='email'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 onChange={onChange}
                 onBlur={onBlur}
                 label='Email Address'
@@ -46,8 +48,10 @@ export const LoginForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='password'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 onChange={onChange}
                 onBlur={onBlur}
                 value={value}
@@ -62,8 +66,10 @@ export const LoginForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='remember'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 label='Remember Me'
                 type='checkbox'
                 onChange={onChange}

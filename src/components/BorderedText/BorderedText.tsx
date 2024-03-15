@@ -7,14 +7,8 @@ interface BorderedTextI {
   className?: string
   children: ReactNode
 }
-export const BorderedText: FC<BorderedTextI> = ({
-  children,
-  className,
-  position = "left",
-}) => {
-  return (
-    <div className={cn(s.borderedText, className, s[position])}>
-      <p className={s.text}>{children}</p>
-    </div>
-  )
-}
+export const BorderedText: FC<BorderedTextI> = ({ children, className, position = "left" }) => (
+  <div className={cn(s.borderedText, className, s[position])}>
+    <p className={s.text}>{children}</p>
+  </div>
+)

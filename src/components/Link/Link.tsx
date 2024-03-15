@@ -11,14 +11,9 @@ interface LinkI {
 }
 
 export const Link: FC<LinkI> = ({
-  className,
-  to,
-  variant = "black",
-  children,
-}) => {
-  return (
-    <NavLink to={to} className={cn(s.link, className, s[variant])}>
-      {children}
-    </NavLink>
-  )
-}
+ className, to, variant = "black", children 
+}) => (
+  <NavLink to={to} className={cn(s.link, className, s[variant])}>
+    {children}
+  </NavLink>
+)

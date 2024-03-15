@@ -8,10 +8,7 @@ interface DisplayPromiseI {
 }
 
 export const displayPromise = ({
-  promise,
-  loading,
-  success,
-  error,
+ promise, loading, success, error 
 }: DisplayPromiseI): void => {
   toast.promise(promise, {
     loading,

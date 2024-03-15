@@ -5,6 +5,4 @@ interface TitleI {
   children: ReactNode
 }
 
-export const Title: FC<TitleI> = ({ children }) => {
-  return <div className={s.title}>{children}</div>
-}
+export const Title: FC<TitleI> = ({ children }) => <div className={s.title}>{children}</div>

@@ -1,7 +1,7 @@
 import { FC, ReactNode, useEffect } from "react"
 import { useAppDispatch } from "shared/hooks"
-import { store } from "./store"
 import { checkAuth } from "store/slices/userSlice"
+import { store } from "./store"
 
 interface AuthProviderI {
   children: ReactNode

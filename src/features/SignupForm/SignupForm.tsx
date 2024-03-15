@@ -63,8 +63,10 @@ export const SignupForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='email'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 onChange={onChange}
                 onBlur={onBlur}
                 label='Email Address'
@@ -78,8 +80,10 @@ export const SignupForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='password'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 onChange={onChange}
                 onBlur={onBlur}
                 value={value}
@@ -94,8 +98,10 @@ export const SignupForm: FC<LoginFormI> = ({ className }) => {
           <Controller
             control={control}
             name='repeatPassword'
-            render={({ field: { onChange, onBlur, value, ref } }) => (
-              <Input
+            render={({
+ field: { onChange, onBlur, value, ref } 
+}) => (
+  <Input
                 label='Repeat password'
                 type='password'
                 onChange={onChange}

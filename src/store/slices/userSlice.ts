@@ -17,7 +17,7 @@ export interface LoginPayload {
 
 export const userLogin = createAsyncThunk(
   "user/login",
-  async function ({ email, password }: LoginPayload): Promise<UserI> {
+  async ({ email, password }: LoginPayload): Promise<UserI> => {
     try {
       const response = await AuthService.login(email, password)
       localStorage.setItem("key", response.data.accessToken)
@@ -31,7 +31,7 @@ export const userLogin = createAsyncThunk(
 
 export const userSignup = createAsyncThunk(
   "user/signup",
-  async function ({ email, password }: LoginPayload): Promise<UserI> {
+  async ({ email, password }: LoginPayload): Promise<UserI> => {
     try {
       const response = await AuthService.signup(email, password)
       localStorage.setItem("key", response.data.accessToken)
@@ -43,7 +43,7 @@ export const userSignup = createAsyncThunk(
   },
 )
 
-export const userLogout = createAsyncThunk("user/logout", async function (): Promise<void> {
+export const userLogout = createAsyncThunk("user/logout", async (): Promise<void> => {
   try {
     await AuthService.logout()
     localStorage.removeItemItem("key")
@@ -52,7 +52,7 @@ export const userLogout = createAsyncThunk("user/logout", async function (): Pro
   }
 })
 
-export const checkAuth = createAsyncThunk("user/checkAuth", async function () {
+export const checkAuth = createAsyncThunk("user/checkAuth", async () => {
   try {
     const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
       withCredentials: true,

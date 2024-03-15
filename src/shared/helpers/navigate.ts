@@ -4,6 +4,6 @@ export const Navigate = (to: string) => {
   const nav = useNavigate()
   return () =>
     nav(to, {
-      relative: "path",
-    })
+    relative: "path",
+  })
 }

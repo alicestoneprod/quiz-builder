@@ -1,6 +1,6 @@
 import { FC } from "react"
-import { InputProps } from ".."
 import cn from "classnames"
+import { InputProps } from ".."
 import s from "./Checkbox.module.scss"
 
 interface CheckboxI extends InputProps {}
@@ -13,11 +13,9 @@ export const Checkbox: FC<CheckboxI> = ({
   type,
   value,
   onChange,
-}) => {
-  return (
-    <div className={cn(s.checkbox, className)}>
-      <input ref={ref} onChange={onChange} value={value} type={type} />
-      <label className={s.label}>{label}</label>
-    </div>
-  )
-}
+}) => (
+  <div className={cn(s.checkbox, className)}>
+    <input ref={ref} onChange={onChange} value={value} type={type} />
+    <label className={s.label}>{label}</label>
+  </div>
+)

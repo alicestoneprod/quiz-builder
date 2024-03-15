@@ -13,20 +13,15 @@ api.interceptors.request.use((config) => {
 })
 
 api.interceptors.response.use(
-  (config) => {
-    return config
-  },
+  (config) => config,
   async (error) => {
     const originalRequest = error.config
     if (error.response.status === 401) {
-      const response = await axios.get(
-        `${import.meta.env.VITE_BASE_API_URL}/refresh`,
-        {
-          withCredentials: true,
-        }
-      )
+      const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
+        withCredentials: true,
+      })
       localStorage.setItem("key", response.data.accessToken)
     }
     return api.request(originalRequest)
-  }
+  },
 )

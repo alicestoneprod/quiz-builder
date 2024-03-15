@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import { routes } from "./routes"
 import { Layout } from "./features"
 
-export const AppRouter = () => {
+export function AppRouter() {
   return (
     <Routes>
       <Route path='/' Component={Layout}>

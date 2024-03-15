@@ -18,13 +18,11 @@ export const Button: FC<ButtonI> = ({
   children,
   variant = "primary",
   disabled,
-}) => {
-  return (
-    <button
-      className={cn(s.button, s[`${variant}`], className)}
-      disabled={disabled}
-      onClick={onClick}>
-      {children}
-    </button>
-  )
-}
+}) => (
+  <button
+    className={cn(s.button, s[`${variant}`], className)}
+    disabled={disabled}
+    onClick={onClick}>
+    {children}
+  </button>
+)

@@ -1,9 +1,6 @@
 import { FC, InputHTMLAttributes, LegacyRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import {
-  inputIsActive,
-  inputIsNotActive,
-} from "shared/constants/motionAnimateOptions"
+import { inputIsActive, inputIsNotActive } from "shared/constants/motionAnimateOptions"
 import cn from "classnames"
 
 import s from "./Input.module.scss"
@@ -64,7 +61,7 @@ export const Input: FC<InputProps> = ({
         {
           [s.inputFocused]: isFocused,
         },
-        { [s.error]: error }
+        { [s.error]: error },
       )}>
       <label className={s.label}>{label}</label>
       {isFocused && (

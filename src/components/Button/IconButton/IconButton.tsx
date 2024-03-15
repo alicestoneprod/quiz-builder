@@ -14,14 +14,12 @@ export const IconButton: FC<IconButtonI> = ({
   icon,
   position = "left",
   disabled,
-}) => {
-  return (
-    <div className={s.iconButton} onClick={onClick}>
-      <Button variant={variant} onClick={onClick} disabled={disabled}>
-        {position === "left" && <img src={icon} className={cn(s.iconLeft)} />}
-        {children}
-        {position === "right" && <img src={icon} className={cn(s.iconRight)} />}
-      </Button>
-    </div>
-  )
-}
+}) => (
+  <div className={s.iconButton} onClick={onClick}>
+    <Button variant={variant} onClick={onClick} disabled={disabled}>
+      {position === "left" && <img src={icon} className={cn(s.iconLeft)} />}
+      {children}
+      {position === "right" && <img src={icon} className={cn(s.iconRight)} />}
+    </Button>
+  </div>
+)

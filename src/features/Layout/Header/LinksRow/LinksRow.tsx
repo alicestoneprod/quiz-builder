@@ -7,16 +7,12 @@ import s from "./LinksRow.module.scss"
 interface LinksRowI {
   className?: string
 }
-export const LinksRow: FC<LinksRowI> = ({ className }) => {
-  return (
-    <div className={cn(s.linksRow, className)}>
-      {routes.map((route) => {
-        return (
-          <Link variant='nav' to={route.path}>
-            {route.name}
-          </Link>
-        )
-      })}
-    </div>
-  )
-}
+export const LinksRow: FC<LinksRowI> = ({ className }) => (
+  <div className={cn(s.linksRow, className)}>
+    {routes.map((route) => (
+      <Link variant='nav' to={route.path}>
+        {route.name}
+      </Link>
+    ))}
+  </div>
+)
