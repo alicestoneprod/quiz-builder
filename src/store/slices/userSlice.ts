@@ -26,7 +26,7 @@ export const userLogin = createAsyncThunk(
     } catch (e) {
       displayError(e as Error)
     }
-  }
+  },
 )
 
 export const userSignup = createAsyncThunk(
@@ -40,29 +40,23 @@ export const userSignup = createAsyncThunk(
     } catch (e) {
       displayError(e as Error)
     }
-  }
+  },
 )
 
-export const userLogout = createAsyncThunk(
-  "user/logout",
-  async function (): Promise<void> {
-    try {
-      await AuthService.logout()
-      localStorage.removeItemItem("key")
-    } catch (e) {
-      displayError(e as Error)
-    }
+export const userLogout = createAsyncThunk("user/logout", async function (): Promise<void> {
+  try {
+    await AuthService.logout()
+    localStorage.removeItemItem("key")
+  } catch (e) {
+    displayError(e as Error)
   }
-)
+})
 
 export const checkAuth = createAsyncThunk("user/checkAuth", async function () {
   try {
-    const response = await axios.get(
-      `${import.meta.env.VITE_BASE_API_URL}/refresh`,
-      {
-        withCredentials: true,
-      }
-    )
+    const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
+      withCredentials: true,
+    })
     localStorage.setItem("key", response.data.accessToken)
     return response.data.user
   } catch (e) {
@@ -107,15 +101,13 @@ export const userSlice = createSlice({
         (action) => action.type.endsWith("/pending"),
         (state) => {
           state.loading = true
-        }
+        },
       )
       .addMatcher(
-        (action) =>
-          action.type.endsWith("/fulfilled") ||
-          action.type.endsWith("/rejected"),
+        (action) => action.type.endsWith("/fulfilled") || action.type.endsWith("/rejected"),
         (state) => {
           state.loading = false
-        }
+        },
       )
   },
 })

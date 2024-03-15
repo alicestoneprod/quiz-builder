@@ -5,14 +5,14 @@ export interface Error {
   message?: string
 }
 
-interface Data {
-  data: Message
-}
-
 interface Message {
   message: string
 }
 
-export const displayError: (e: Error) => void = (e: Error): void => {
+interface Data {
+  data: Message
+}
+
+export const displayError = (e: Error): void => {
   toast.error(e?.response?.data?.message || e?.message || "Unknown error")
 }

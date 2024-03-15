@@ -13,10 +13,7 @@ export const ExamplePage: FC<ExamplePageI> = ({}) => {
       <Button onClick={() => {}} variant='outlined'>
         Type 1
       </Button>
-      <IconButton
-        icon='/assets/icons/Polygon.svg'
-        onClick={() => {}}
-        variant='text'>
+      <IconButton icon='/assets/icons/Polygon.svg' onClick={() => {}} variant='text'>
         Type 1
       </IconButton>
       <IconButton

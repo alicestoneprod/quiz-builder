@@ -23,7 +23,7 @@ export const LoginPage: FC<LoginPageI> = ({}) => {
         <LoginForm />
       </div>
       <div className={s.loginRight}>
-        <img className={s.img} src='/assets/icons/Graduate.png'></img>
+        <img className={s.img} src='/assets/icons/Graduate.png' />
       </div>
     </div>
   )

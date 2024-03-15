@@ -1,8 +1,8 @@
-import { FC } from "react"
 import { useForm, Controller } from "react-hook-form"
 import { Button, Input, Link } from "components"
 import { userSignup } from "store/slices/userSlice"
 import { useAppDispatch } from "shared/hooks/useAppDispatch"
+import { FC } from "react"
 import { isEmail, displayPromise } from "shared/helpers"
 import cn from "classnames"
 import s from "./SignupForm.module.scss"
@@ -23,7 +23,6 @@ export const SignupForm: FC<LoginFormI> = ({ className }) => {
     handleSubmit,
     getValues,
     setError,
-    reset,
     formState: { errors },
   } = useForm<LoginFormFieldsI>()
 

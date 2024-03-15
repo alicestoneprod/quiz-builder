@@ -3,17 +3,11 @@ import { AxiosResponse } from "axios"
 import { AuthResponse } from "shared/models"
 
 export default class AuthService {
-  static async login(
-    email: string,
-    password: string
-  ): Promise<AxiosResponse<AuthResponse>> {
+  static async login(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
     return api.post<AuthResponse>("/login", { email, password })
   }
 
-  static async signup(
-    email: string,
-    password: string
-  ): Promise<AxiosResponse<AuthResponse>> {
+  static async signup(email: string, password: string): Promise<AxiosResponse<AuthResponse>> {
     return api.post<AuthResponse>("/signup", { email, password })
   }
 
