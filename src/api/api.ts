@@ -16,12 +16,18 @@ api.interceptors.response.use(
   (config) => config,
   async (error) => {
     const originalRequest = error.config
-    if (error.response.status === 401) {
-      const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
-        withCredentials: true,
-      })
-      localStorage.setItem("key", response.data.accessToken)
+    if (error.response.status === 401 && error.config && !error.config._isRetry) {
+      originalRequest._isRetry = true
+      try {
+        const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
+          withCredentials: true,
+        })
+        localStorage.setItem("token", response.data.accessToken)
+        return api.request(originalRequest)
+      } catch (e) {
+        console.log("Не авторизован")
+      }
     }
-    return api.request(originalRequest)
+    throw error
   },
 )

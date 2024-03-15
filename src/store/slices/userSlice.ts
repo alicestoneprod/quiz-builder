@@ -3,6 +3,7 @@ import AuthService from "services/AuthService"
 import { UserI } from "shared/models/UserI"
 import { displayError, displaySuccess } from "shared/helpers"
 import axios from "axios"
+import { isEmpty } from "lodash"
 
 interface UserSliceI {
   user: UserI
@@ -20,7 +21,7 @@ export const userLogin = createAsyncThunk(
   async ({ email, password }: LoginPayload): Promise<UserI> => {
     try {
       const response = await AuthService.login(email, password)
-      localStorage.setItem("key", response.data.accessToken)
+      localStorage.setItem("token", response.data.accessToken)
       displaySuccess("Вы успешно авторизовались!")
       return response.data.user
     } catch (e) {
@@ -34,7 +35,7 @@ export const userSignup = createAsyncThunk(
   async ({ email, password }: LoginPayload): Promise<UserI> => {
     try {
       const response = await AuthService.signup(email, password)
-      localStorage.setItem("key", response.data.accessToken)
+      localStorage.setItem("token", response.data.accessToken)
       displaySuccess("Вы успешно зарегистрировались!")
       return response.data.user
     } catch (e) {
@@ -46,7 +47,7 @@ export const userSignup = createAsyncThunk(
 export const userLogout = createAsyncThunk("user/logout", async (): Promise<void> => {
   try {
     await AuthService.logout()
-    localStorage.removeItemItem("key")
+    localStorage.removeItemItem("token")
   } catch (e) {
     displayError(e as Error)
   }
@@ -57,7 +58,7 @@ export const checkAuth = createAsyncThunk("user/checkAuth", async () => {
     const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
       withCredentials: true,
     })
-    localStorage.setItem("key", response.data.accessToken)
+    localStorage.setItem("token", response.data.accessToken)
     return response.data.user
   } catch (e) {
     console.log(e)
@@ -81,20 +82,23 @@ export const userSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(userLogin.fulfilled, (state, action) => {
-      state.isAuth = true
-      state.user = { ...action.payload }
+      const { payload } = action
+      state.isAuth = !isEmpty(payload)
+      state.user = !payload ? ({} as UserI) : payload
     })
     builder.addCase(userSignup.fulfilled, (state, action) => {
-      state.isAuth = true
-      state.user = { ...action.payload }
+      const { payload } = action
+      state.isAuth = !isEmpty(payload)
+      state.user = !payload ? ({} as UserI) : payload
     })
     builder.addCase(userLogout.fulfilled, (state) => {
       state.isAuth = false
       state.user = {} as UserI
     })
     builder.addCase(checkAuth.fulfilled, (state, action) => {
-      state.isAuth = true
-      state.user = { ...action.payload }
+      const { payload } = action
+      state.isAuth = !isEmpty(payload)
+      state.user = !payload ? ({} as UserI) : payload
     })
     builder
       .addMatcher(

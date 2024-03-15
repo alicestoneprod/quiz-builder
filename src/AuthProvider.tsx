@@ -13,7 +13,7 @@ export const AuthProvider: FC<AuthProviderI> = ({ children }) => {
   const dispatch = useAppDispatch()
 
   useEffect(() => {
-    if (localStorage.getItem("key")) {
+    if (localStorage.getItem("token")) {
       store.dispatch(checkAuth())
     }
   }, [dispatch])
