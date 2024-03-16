@@ -1,11 +1,11 @@
-import { BrowserRouter } from "react-router-dom"
 import React from "react"
+import { BrowserRouter } from "react-router-dom"
 import { Provider } from "react-redux"
 import { store } from "store"
 import { Loader, Toaster } from "components"
 import { AppRouter } from "./AppRouter"
-import "styles/globals.scss"
 import { AuthProvider } from "./AuthProvider"
+import "styles/globals.scss"
 
 function App() {
   return (
