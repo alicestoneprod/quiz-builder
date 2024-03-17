@@ -11,8 +11,8 @@ export const Header: FC<HeaderI> = ({}) => (
       <div className={s.title} />
       <div className={s.linksBtns}>
         <LinksRow className={s.linksRow} />
-        <Link to='login' variant='button'>
-          <Button variant='outlined'>Login</Button>
+        <Link to='/login' variant='button'>
+          <Button className={s.loginBtn} variant='outlined'>Login</Button>
         </Link>
       </div>
     </div>
