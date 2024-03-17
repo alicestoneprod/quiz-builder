@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom"
 import { Provider } from "react-redux"
 import { store } from "store"
 import { Loader, Toaster } from "components"
-import AppRouter from "AppRouter"
+import AppRouter from "./AppRouter"
 import { AuthProvider } from "./AuthProvider"
 import "styles/globals.scss"
 
