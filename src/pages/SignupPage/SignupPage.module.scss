@@ -3,14 +3,14 @@
 .loginPage {
   display: flex;
   flex-direction: row;
-  min-height: 88vh;
+  height: 840px;
 }
 
 .loginLeft {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 50svw;
+  min-width: 50%;
   padding: 40px 0 0 31px;
   gap: 40px;
 }
@@ -45,6 +45,6 @@
 }
 
 .img {
-  width: 450px;
-  height: 450px;
+  width: 50%;
+  height: 50%;
 }
