@@ -61,7 +61,7 @@ export const checkAuth = createAsyncThunk("user/checkAuth", async (): Promise<Us
     localStorage.setItem("token", response.data.accessToken)
     return response.data.user
   } catch (e) {
-    displaySuccess("Проверка авторизации прошла успешно")
+    displayError(e as Error)
   }
 })
 
