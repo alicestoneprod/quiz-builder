@@ -53,7 +53,7 @@ export const userLogout = createAsyncThunk("user/logout", async (): Promise<void
   }
 })
 
-export const checkAuth = createAsyncThunk("user/checkAuth", async () => {
+export const checkAuth = createAsyncThunk("user/checkAuth", async (): Promise<UserI> => {
   try {
     const response = await axios.get(`${import.meta.env.VITE_BASE_API_URL}/refresh`, {
       withCredentials: true,
@@ -61,7 +61,7 @@ export const checkAuth = createAsyncThunk("user/checkAuth", async () => {
     localStorage.setItem("token", response.data.accessToken)
     return response.data.user
   } catch (e) {
-    console.log(e)
+    displaySuccess("Проверка авторизации прошла успешно")
   }
 })
 

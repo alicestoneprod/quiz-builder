@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom"
 import { routes } from "./routes"
 import { Layout } from "./features"
 
-export function AppRouter() {
+const AppRouter = () => {
   return (
     <Routes>
       <Route path='/' Component={Layout}>
@@ -14,3 +14,5 @@ export function AppRouter() {
     </Routes>
   )
 }
+
+export default AppRouter

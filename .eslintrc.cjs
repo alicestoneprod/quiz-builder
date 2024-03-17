@@ -35,5 +35,7 @@ module.exports = {
     "import/no-unresolved": [0],
     "react/jsx-props-no-spreading": 0,
     "jsx-quotes": [2, "prefer-single"],
+    "no-param-reassign": [0],
+    "import/extensions": [never],
   },
 }
