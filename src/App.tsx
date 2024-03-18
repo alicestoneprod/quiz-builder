@@ -9,7 +9,7 @@ import "styles/globals.scss"
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/'>
       <Provider store={store}>
         <AuthProvider>
           <React.StrictMode>

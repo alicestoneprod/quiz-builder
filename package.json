@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://quiz-builder-beta.vercel.app",
   "scripts": {
     "dev": "vite --open --port 3000",
     "build": "vite build",
