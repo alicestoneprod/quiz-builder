@@ -1,0 +1,30 @@
+@use "styles" as *;
+
+.dropdown {
+  width: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconLabelCnt {
+  display: flex;
+  user-select: none;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.label {
+  color: $color-yellow-default;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.icon {
+  position: relative;
+  top: 13px;
+  left: -5px;
+}
