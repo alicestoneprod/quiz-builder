@@ -1,35 +1,77 @@
 import { AboutPage, ExamplePage, IndexPage, LoginPage, SignupPage } from "pages"
 
-export const routes = [
-  { path: "/", name: "Index", page: IndexPage },
+export const headerRoutes = [
   {
-    path: "work",
+    path: "/work",
     name: "How it works?",
     page: AboutPage,
   },
   {
-    path: "features",
+    path: "/features",
     name: "Features",
     page: AboutPage,
   },
   {
-    path: "about",
+    path: "/about",
+    name: "About Us",
+    page: AboutPage,
+  },
+]
+
+export const publicRoutes = [
+  { path: "/", name: "Index", page: IndexPage },
+  {
+    path: "/work",
+    name: "How it works?",
+    page: AboutPage,
+  },
+  {
+    path: "/features",
+    name: "Features",
+    page: AboutPage,
+  },
+  {
+    path: "/about",
     name: "About Us",
     page: AboutPage,
   },
   {
-    path: "example",
+    path: "/example",
     name: "Example",
     page: ExamplePage,
   },
   {
-    path: "login",
+    path: "/login",
     name: "Login",
     page: LoginPage,
   },
   {
-    path: "signup",
+    path: "/signup",
     name: "signup",
     page: SignupPage,
+  },
+]
+
+export const privateRoutes = [
+  { path: "/", name: "Index", page: IndexPage },
+  {
+    path: "/work",
+    name: "How it works?",
+    page: AboutPage,
+  },
+  {
+    path: "/features",
+    name: "Features",
+    page: AboutPage,
+  },
+  {
+    path: "/about",
+    name: "About Us",
+    page: AboutPage,
+  },
+  {
+    path: "/example",
+    name: "Example",
+    page: ExamplePage,
   },
 ]
