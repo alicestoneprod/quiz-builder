@@ -19,7 +19,7 @@ export const Header: FC<HeaderI> = ({}) => {
             <LinksRow className={s.linksRow} />
             <div className={s.dropdownCnt}>
               <Dropdown
-                icon={<UserIcon />}
+                icon={<UserIcon width={20} height={30} />}
                 iconPosition='left'
                 label={user.user.email.split("@gmail.com")[0]}
                 options={[{ label: "Dashboard", value: "/dashboard" }]}
