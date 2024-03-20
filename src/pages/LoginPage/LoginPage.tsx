@@ -1,4 +1,5 @@
 import { FC } from "react"
+import { Logo } from "components"
 import { LoginForm } from "features"
 import s from "./LoginPage.module.scss"
 
@@ -8,7 +9,7 @@ export const LoginPage: FC<LoginPageI> = ({}) => (
   <div className={s.loginPage}>
     <div className={s.loginLeft}>
       <div className={s.titleDescCnt}>
-        <div className={s.title} />
+        <Logo width={250} height={60} />
         <div className={s.descCnt}>
           <p className={s.desc}>
             Welcome back!

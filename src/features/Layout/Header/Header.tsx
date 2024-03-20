@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { Button, Dropdown, Link } from "components"
+import { Button, Dropdown, Link, Logo } from "components"
 import { LinksRow } from "./LinksRow"
 import UserIcon from "assets/icons/profile-icon.svg?react"
 import s from "./Header.module.scss"
@@ -14,7 +14,7 @@ export const Header: FC<HeaderI> = ({}) => {
     return (
       <div className={s.header}>
         <div className={s.titleLinks}>
-          <div className={s.title} />
+          <Logo width={254} height={60} />
           <div className={s.linksBtns}>
             <LinksRow className={s.linksRow} />
             <div className={s.dropdownCnt}>
@@ -37,7 +37,7 @@ export const Header: FC<HeaderI> = ({}) => {
     return (
       <div className={s.header}>
         <div className={s.titleLinks}>
-          <div className={s.title} />
+          <Logo width={254} height={60} />
           <div className={s.linksBtns}>
             <LinksRow className={s.linksRow} />
             <Link to='/login' variant='button'>
