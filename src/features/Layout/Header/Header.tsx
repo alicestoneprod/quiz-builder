@@ -4,11 +4,17 @@ import { LinksRow } from "./LinksRow"
 import UserIcon from "assets/icons/profile-icon.svg?react"
 import s from "./Header.module.scss"
 import { useAppSelector } from "shared/hooks"
+import { useLocation } from "react-router-dom"
 
 interface HeaderI {}
 
 export const Header: FC<HeaderI> = ({}) => {
   const user = useAppSelector((state) => state.user)
+  const location = useLocation()
+
+  if (location.pathname === "/signup" || location.pathname === "/login") {
+    return
+  }
 
   if (user?.isAuth) {
     return (
