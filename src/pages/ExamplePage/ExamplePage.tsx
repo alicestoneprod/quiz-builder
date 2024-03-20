@@ -1,7 +1,7 @@
 import { FC, useState } from "react"
 import { IconButton } from "components/Button"
 import ProfileIcon from "assets/icons/profile-icon.svg?react"
-import { Button, Dropdown, Input } from "components"
+import { Button, Dropdown, Input, Logo } from "components"
 import { dropdown__mock, dropdown__navigate_mock } from "shared/mocks/example__mocks"
 import s from "./ExamplePage.module.scss"
 
@@ -42,6 +42,7 @@ export const ExamplePage: FC<ExamplePageI> = ({}) => {
       />
       <div>userDropdownValue: {userValue}</div>
       <Dropdown options={dropdown__navigate_mock} label='Navigate' variant='navigate' />
+      <Logo width={200} height={80} />
     </div>
   )
 }

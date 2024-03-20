@@ -6,5 +6,6 @@ import { Title } from "./Title"
 import { Toaster } from "./Toaster"
 import { Loader } from "./Loader"
 import { Dropdown } from "./Dropdown"
+import { Logo } from "./Logo"
 
-export { Button, Input, Link, BorderedText, Title, Toaster, Loader, Dropdown }
+export { Button, Input, Link, BorderedText, Title, Toaster, Loader, Dropdown, Logo }
