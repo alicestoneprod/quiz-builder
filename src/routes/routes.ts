@@ -1,4 +1,4 @@
-import { AboutPage, ExamplePage, IndexPage, LoginPage, SignupPage } from "pages"
+import { AboutPage, DashboardPage, ExamplePage, IndexPage, LoginPage, SignupPage } from "pages"
 
 export const headerRoutes = [
   {
@@ -73,5 +73,10 @@ export const privateRoutes = [
     path: "/example",
     name: "Example",
     page: ExamplePage,
+  },
+  {
+    path: "/dashboard",
+    name: "Dashboard",
+    page: DashboardPage,
   },
 ]
