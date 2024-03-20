@@ -5,6 +5,7 @@ import UserIcon from "assets/icons/profile-icon.svg?react"
 import s from "./Header.module.scss"
 import { useAppSelector } from "shared/hooks"
 import { useLocation } from "react-router-dom"
+import { AuthHeader } from "./AuthHeader"
 
 interface HeaderI {}
 
@@ -17,26 +18,7 @@ export const Header: FC<HeaderI> = ({}) => {
   }
 
   if (user?.isAuth) {
-    return (
-      <div className={s.header}>
-        <div className={s.titleLinks}>
-          <Logo width={254} height={60} />
-          <div className={s.linksBtns}>
-            <LinksRow className={s.linksRow} />
-            <div className={s.dropdownCnt}>
-              <Dropdown
-                icon={<UserIcon width={20} height={30} />}
-                iconPosition='left'
-                label={user.user.email.split("@gmail.com")[0]}
-                options={[{ label: "Dashboard", value: "/dashboard" }]}
-                variant='navigate'
-              />
-            </div>
-          </div>
-        </div>
-        <div className={s.line} />
-      </div>
-    )
+    return <AuthHeader />
   }
 
   if (!user?.isAuth) {

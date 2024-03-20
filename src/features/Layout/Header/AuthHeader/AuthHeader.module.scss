@@ -1,0 +1,17 @@
+@use "styles" as *;
+
+.authHeader {
+  min-width: 100svh;
+  padding: 6px 80px;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons {
+  button {
+    height: 50px;
+    font-size: 20px;
+  }
+}

@@ -12,7 +12,7 @@
   width: fit-content;
   width: 100%;
   height: 64px;
-  gap: 6px;
+  gap: 10px;
   font-size: 26px;
   user-select: none;
 }
@@ -33,6 +33,13 @@
     transition:
       background-color 0.5s ease,
       color 0.2s ease;
+    svg * {
+      fill: $color-yellow-default;
+      transition: fill 0.5s ease;
+    }
+  }
+  svg * {
+    transition: fill 0.5s ease;
   }
 }
 
@@ -49,6 +56,13 @@
     transition:
       color 0.3s ease,
       background-color 0.3s ease;
+    svg * {
+      fill: $color-white-default;
+      transition: fill 0.5s ease;
+    }
+  }
+  svg * {
+    transition: fill 0.5s ease;
   }
   width: fit-content;
   padding: 5px 40px;

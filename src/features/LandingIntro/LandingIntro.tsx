@@ -1,6 +1,7 @@
 import { FC } from "react"
 import { BorderedText, Button, Title } from "components"
 import { IconButton } from "components/Button"
+import ArrowIcon from "assets/icons/polygon.svg?react"
 import s from "./LandingIntro.module.scss"
 
 interface LandingIntroI {}
@@ -23,8 +24,7 @@ export const LandingIntro: FC<LandingIntroI> = ({}) => (
           variant='text'
           position='left'
           onClick={() => {}}
-          icon='/assets/icons/Polygon.svg'
-        >
+          icon={<ArrowIcon width={16} height={16} />}>
           know more
         </IconButton>
       </div>

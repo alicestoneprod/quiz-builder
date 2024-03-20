@@ -1,10 +1,10 @@
-import { FC } from "react"
+import { FC, ReactNode } from "react"
 import { Button, ButtonI } from "components/Button"
-import cn from "classnames"
 import s from "./IconButton.module.scss"
+import cn from "classnames"
 
 interface IconButtonI extends ButtonI {
-  icon: string
+  icon: ReactNode
   position?: "left" | "right"
 }
 export const IconButton: FC<IconButtonI> = ({
@@ -17,9 +17,9 @@ export const IconButton: FC<IconButtonI> = ({
 }) => (
   <div className={s.iconButton} onClick={onClick}>
     <Button variant={variant} onClick={onClick} disabled={disabled}>
-      {position === "left" && <img src={icon} className={cn(s.iconLeft)} />}
+      {position === "left" && icon}
       {children}
-      {position === "right" && <img src={icon} className={cn(s.iconRight)} />}
+      {position === "right" && icon}
     </Button>
   </div>
 )
