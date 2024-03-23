@@ -19,6 +19,9 @@
   color: $color-yellow-default;
   font-size: 18px;
   font-weight: $fw-semibold;
+  &::placeholder {
+    color: $color-yellow-placeholder;
+  }
 }
 
 .inputLeftColor {

@@ -1,0 +1,12 @@
+@use "styles" as *;
+
+.cardLabel {
+  background-color: $color-yellow-default;
+  display: flex;
+  width: 90px;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 14px;
+  border-radius: 10px;
+}

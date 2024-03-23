@@ -27,6 +27,7 @@ export const Input: FC<InputProps> = ({
   value,
   onChange,
   ref,
+  placeholder,
   ...props
 }) => {
   const [isFocused, setIsFocused] = useState<boolean>(false)
@@ -81,7 +82,8 @@ export const Input: FC<InputProps> = ({
         onBlur={onBlur}
         type={type}
         value={value}
-        onChange={onChange}></input>
+        onChange={onChange}
+        placeholder={placeholder}></input>
     </div>
   )
 }

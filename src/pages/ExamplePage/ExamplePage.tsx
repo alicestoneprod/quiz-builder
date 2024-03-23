@@ -2,6 +2,7 @@ import { FC, useState } from "react"
 import { IconButton } from "components/Button"
 import ProfileIcon from "assets/icons/profile-icon.svg?react"
 import { Button, Dropdown, Input, Logo } from "components"
+import { JoinQuizForm } from "features"
 import { dropdown__mock, dropdown__navigate_mock } from "shared/mocks/example__mocks"
 import s from "./ExamplePage.module.scss"
 

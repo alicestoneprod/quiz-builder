@@ -1,4 +1,21 @@
 @use "styles" as *;
 
 .dashboardPage {
+  display: flex;
+  flex-direction: column;
+  background-color: $color-grey-background;
+  min-height: 2213px;
+  padding: 45px 126px 155px 126px;
+}
+
+.profileJoinCnt {
+  display: flex;
+  gap: 36px;
+  margin-bottom: 60px;
+}
+
+.groupedQuizez {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }

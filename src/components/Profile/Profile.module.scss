@@ -1,0 +1,28 @@
+@use "styles" as *;
+
+.textAvatarCnt {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 107px;
+}
+
+.profileWrapper {
+  position: relative;
+  height: 276px;
+}
+
+.greetText {
+  font-weight: $fw-medium;
+  font-size: 40px;
+}
+
+.icon {
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}

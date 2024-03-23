@@ -1,0 +1,28 @@
+@use "styles" as *;
+
+.joinQuizForm {
+}
+
+.formWrapper {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1000px;
+  height: 276px;
+}
+
+.label {
+  font-size: 32px;
+  font-weight: $fw-medium;
+  margin-bottom: 15px;
+}
+
+.formCnt {
+  width: 700px;
+}
+
+.form {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}

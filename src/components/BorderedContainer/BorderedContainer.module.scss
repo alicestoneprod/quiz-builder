@@ -1,0 +1,9 @@
+@use "styles" as *;
+
+.borderedContainer {
+  display: flex;
+  border-radius: 56px;
+  background-color: $color-white-default;
+  height: fit-content;
+  width: fit-content;
+}
