@@ -1,6 +1,7 @@
 @use "styles" as *;
 
 .cardLabel {
+  user-select: none;
   background-color: $color-yellow-default;
   display: flex;
   width: 90px;
