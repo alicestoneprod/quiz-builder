@@ -1,17 +1,16 @@
 import { FC, useState } from "react"
 import { IconButton } from "components/Button"
-import ProfileIcon from "assets/icons/profile-icon.svg?react"
+import ClockIcon from "assets/icons/clock.svg?react"
 import { Button, Dropdown, Input, Logo } from "components"
-import { JoinQuizForm } from "features"
 import { dropdown__mock, dropdown__navigate_mock } from "shared/mocks/example__mocks"
 import s from "./ExamplePage.module.scss"
 
 interface ExamplePageI {}
 
 export const ExamplePage: FC<ExamplePageI> = ({}) => {
-  const [userValue, setUserValue] = useState<boolean | string>()
+  const [userValue, setUserValue] = useState<string | boolean | number>()
 
-  const onDropdownClick = (value: string | boolean) => {
+  const onDropdownClick = (value: string | boolean | number) => {
     setUserValue(value)
   }
 
@@ -35,9 +34,10 @@ export const ExamplePage: FC<ExamplePageI> = ({}) => {
       </IconButton>
       <Input value='hello' label='Email Address' onChange={() => {}} />
       <Dropdown
-        icon={<ProfileIcon />}
+        icon={<ClockIcon />}
         iconPosition='left'
         onClick={onDropdownClick}
+        value={userValue}
         options={dropdown__mock}
         label='User'
       />

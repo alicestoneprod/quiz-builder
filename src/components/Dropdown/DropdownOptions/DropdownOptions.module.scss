@@ -3,22 +3,22 @@
 .optionsContainer {
   position: absolute;
   background-color: $color-white-default;
-  left: 5px;
   z-index: 40;
   top: 100%;
   display: flex;
   flex-direction: column;
   width: 280px;
   border-radius: 20px;
-  padding: 5px;
+  padding: 5px 0;
   font-size: 15px;
   box-shadow: 0px 5px 25px 2px rgba(34, 60, 80, 0.2);
-  width: 100%;
+  width: fit-content;
 }
 
 .option {
+  text-align: center;
   transition: background-color 0.3s ease;
-  padding: 5px 0 5px 10px;
+  padding: 5px 20px 5px 20px;
   border-radius: 10px;
   font-size: 18px;
 }
@@ -27,4 +27,12 @@
   background-color: $color-grey-link;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+
+.isActive {
+  background-color: $color-yellow-dropdown;
+}
+
+.isActive:hover {
+  background-color: $color-yellow-dropdown;
 }
