@@ -12,6 +12,7 @@ import { Profile } from "./Profile/Profile"
 import { GroupedQuizez } from "./GroupedQuizez"
 import { QuizezList } from "./QuizezList"
 import { QuizCard } from "./QuizCard"
+import { IconButton } from "./IconButton"
 
 export {
   Button,
@@ -28,4 +29,5 @@ export {
   GroupedQuizez,
   QuizezList,
   QuizCard,
+  IconButton,
 }

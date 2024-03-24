@@ -1,0 +1,61 @@
+@use "styles" as *;
+
+.iconButtonWrapper {
+  width: 32px;
+  height: 32px;
+}
+
+.iconButton {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: $color-white-default;
+  border: 1px solid $color-grey-default;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.iconButton:hover {
+  background-color: $color-grey-hover;
+  transition: background-color 0.3s ease;
+}
+
+.labelIcon {
+  position: relative;
+  top: 1px;
+  left: 45%;
+}
+
+.labelTextCnt {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 90%;
+}
+
+.label {
+  border-radius: 4px;
+  color: $color-white-default;
+  padding: 10px 18px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-background-hover-label;
+  width: fit-content;
+}
+
+.isHovered {
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.isNotHovered {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
