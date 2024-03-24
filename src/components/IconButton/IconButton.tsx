@@ -10,14 +10,14 @@ interface IconButtonI {
   className?: string
   variant: "arrow-left" | "settings"
   disabled?: boolean
-  dataLabel?: string
+  hoverText?: string
 }
 
 export const IconButton: FC<IconButtonI> = ({
   variant = "arrow-left",
   onClick,
   className,
-  dataLabel,
+  hoverText,
   disabled,
 }) => {
   const { isHover, onHover, onStopHover } = useHover()
@@ -35,7 +35,7 @@ export const IconButton: FC<IconButtonI> = ({
       </button>
       <div className={cn(s.labelTextCnt, isHover ? s.isHovered : s.isNotHovered)}>
         <LabelPolygon className={s.labelIcon} />
-        <label className={s.label}>{dataLabel}</label>
+        <label className={s.label}>{hoverText}</label>
       </div>
     </div>
   )
