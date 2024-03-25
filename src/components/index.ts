@@ -13,6 +13,7 @@ import { GroupedQuizez } from "./GroupedQuizez"
 import { QuizezList } from "./QuizezList"
 import { QuizCard } from "./QuizCard"
 import { IconButton } from "./IconButton"
+import { MarkCheckbox } from "./MarkCheckbox"
 
 export {
   Button,
@@ -30,4 +31,5 @@ export {
   QuizezList,
   QuizCard,
   IconButton,
+  MarkCheckbox,
 }

@@ -1,6 +1,6 @@
 import { FC, useState } from "react"
 import { IconButton } from "components/Button"
-import { IconButton as NewIconButton } from "components"
+import { MarkCheckbox, IconButton as NewIconButton } from "components"
 import ClockIcon from "assets/icons/clock.svg?react"
 import { Button, Dropdown, Input, Logo } from "components"
 import { dropdown__mock, dropdown__navigate_mock } from "shared/mocks/example__mocks"
@@ -10,7 +10,7 @@ interface ExamplePageI {}
 
 export const ExamplePage: FC<ExamplePageI> = ({}) => {
   const [userValue, setUserValue] = useState<string | boolean | number>()
-
+  const [isRight, setIsRight] = useState<boolean>(false)
   const onDropdownClick = (value: string | boolean | number) => {
     setUserValue(value)
   }
@@ -46,6 +46,7 @@ export const ExamplePage: FC<ExamplePageI> = ({}) => {
       <Dropdown options={dropdown__navigate_mock} label='Navigate' variant='navigate' />
       <Logo width={200} height={80} />
       <NewIconButton variant='arrow-left' hoverText='Назад' />
+      <MarkCheckbox value={isRight} onClick={() => setIsRight((prevState) => !prevState)} />
     </div>
   )
 }

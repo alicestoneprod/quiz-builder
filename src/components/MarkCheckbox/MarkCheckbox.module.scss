@@ -1,0 +1,30 @@
+@use "styles" as *;
+
+.markCheckbox {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid $color-white-default;
+}
+
+.isChecked {
+  transition: background-color 0.3s ease;
+  background-color: $color-green-checked;
+  svg * {
+    stroke: $color-white-default;
+    transition: stroke 0.3s ease;
+  }
+}
+
+.isNotChecked {
+  transition: background-color 0.3s ease;
+  background-color: $color-grey-7c;
+  svg * {
+    stroke: $color-grey-c5;
+    transition: stroke 0.3s ease;
+  }
+}
