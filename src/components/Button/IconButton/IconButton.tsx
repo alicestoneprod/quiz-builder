@@ -8,6 +8,7 @@ interface IconButtonI extends ButtonI {
   position?: "left" | "right"
 }
 export const IconButton: FC<IconButtonI> = ({
+  className,
   children,
   variant,
   onClick,
@@ -15,7 +16,7 @@ export const IconButton: FC<IconButtonI> = ({
   position = "left",
   disabled,
 }) => (
-  <div className={s.iconButton} onClick={onClick}>
+  <div className={cn(className, s.iconButton)} onClick={onClick}>
     <Button variant={variant} onClick={onClick} disabled={disabled}>
       {position === "left" && icon}
       {children}

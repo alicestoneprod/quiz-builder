@@ -1,4 +1,12 @@
-import { AboutPage, DashboardPage, ExamplePage, IndexPage, LoginPage, SignupPage } from "pages"
+import {
+  AboutPage,
+  CreateQuizPage,
+  DashboardPage,
+  ExamplePage,
+  IndexPage,
+  LoginPage,
+  SignupPage,
+} from "pages"
 
 export const headerRoutes = [
   {
@@ -78,5 +86,10 @@ export const privateRoutes = [
     path: "/dashboard",
     name: "Dashboard",
     page: DashboardPage,
+  },
+  {
+    path: "/createQuiz",
+    name: "Create Quiz",
+    page: CreateQuizPage,
   },
 ]

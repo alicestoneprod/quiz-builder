@@ -1,0 +1,40 @@
+@use "styles" as *;
+
+.header {
+  min-width: 100svh;
+  padding: 0 40px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $color-grey-d9;
+}
+
+.buttonQuizCnt {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.quizBtn {
+  font-size: 20px;
+  font-weight: $fw-medium;
+  &:hover {
+    text-decoration: underline;
+    height: 37px;
+  }
+}
+
+.saveBtn {
+  button {
+    font-size: 16px;
+    font-weight: $fw-medium;
+    height: 37px;
+  }
+}
+
+.rightButtons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}

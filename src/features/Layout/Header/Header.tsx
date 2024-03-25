@@ -1,7 +1,6 @@
 import { FC } from "react"
-import { Button, Dropdown, Link, Logo } from "components"
+import { Button, Link, Logo } from "components"
 import { LinksRow } from "./LinksRow"
-import UserIcon from "assets/icons/profile-icon.svg?react"
 import s from "./Header.module.scss"
 import { useAppSelector } from "shared/hooks"
 import { useLocation } from "react-router-dom"
@@ -13,7 +12,11 @@ export const Header: FC<HeaderI> = ({}) => {
   const user = useAppSelector((state) => state.user)
   const location = useLocation()
 
-  if (location.pathname === "/signup" || location.pathname === "/login") {
+  if (
+    location.pathname === "/signup" ||
+    location.pathname === "/login" ||
+    location.pathname === "/createQuiz"
+  ) {
     return
   }
 
